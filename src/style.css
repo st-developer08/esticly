@@ -52,6 +52,12 @@ body {
   letter-spacing: -0.5px;
 }
 
+.header__logo img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
 .header__nav {
   display: flex;
   gap: 2.5rem;
@@ -226,7 +232,8 @@ letter-spacing: 0%;
 .hero__feature {
   display: flex;
   gap: 1rem;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero__feature-icon {
@@ -291,9 +298,8 @@ letter-spacing: 0%;
 
 /* Hero Bottom Section */
 .hero__bottom {
-  background: #F3F4F6;
   padding: 3rem 2rem;
-  margin-top: 4rem;
+  margin-top: 1rem;
 }
 
 .hero__bottom-container {
@@ -303,6 +309,17 @@ letter-spacing: 0%;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  
+  border-radius: 24px;
+  padding: 32px;
+  gap: 32px;
+  angle: 0 deg;
+  opacity: 1;
+  background: #ffffff; /* На фото фон карточки выглядит чисто белым */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+
+
+
 }
 
 .hero__bottom-text {
