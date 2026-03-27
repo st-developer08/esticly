@@ -14,3 +14,7 @@ links.forEach(link => {
     mobileMenu.classList.remove('active');
   });
 });
+
+
+// Add ID to menu button for mobile menu
+document.getElementById('menuBtn').id = 'menuBtn';
