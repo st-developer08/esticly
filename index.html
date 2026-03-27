@@ -5,8 +5,101 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>website-esticly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
   </head>
   <body>
+
+    <!-- Header Navigation -->
+<header class="header">
+  <div class="header__container">
+    <div class="header__logo">
+      <img src="./public/logo.png" alt="">
+    </div>
+
+    <nav class="header__nav">
+      <a href="#" class="header__link">Возможности</a>
+      <a href="#" class="header__link">Для мастеров</a>
+      <a href="#" class="header__link">Для салонов</a>
+      <a href="#" class="header__link">Цены</a>
+      <a href="#" class="header__link">FAQ</a>
+    </nav>
+
+    <div class="header__actions">
+  <select class="header__lang-select">
+    <option value="ru">RU</option>
+    <option value="en">EN</option>
+    <option value="ua">UA</option>
+  </select>
+  <button class="header__btn">Скачать приложение</button>
+</div>
+
+    <button class="header__menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__content">
+      <h1 class="hero__title">Управляйте записями и клиентами без хаоса</h1>
+      
+      <p class="hero__description">
+        Esticly — это CRM для салонов красоты и частных мастеров, которая помогает автоматизировать запись клиентов, управлять клиентской базой, отправлять напоминания и контролировать доход в одном приложении.
+      </p>
+
+      <div class="hero__features">
+        <div class="hero__feature">
+          <svg class="hero__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2L13 8H20L14.5 12L16.5 18L10 14L3.5 18L5.5 12L0 8H7L10 2Z" fill="#6366F1"/>
+          </svg>
+          <p>Система онлайн-записи клиентов позволяет принимать заявки 24/7 без звонков, сообщений и длительных переписок.</p>
+        </div>
+
+        <div class="hero__feature">
+          <svg class="hero__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2L13 8H20L14.5 12L16.5 18L10 14L3.5 18L5.5 12L0 8H7L10 2Z" fill="#6366F1"/>
+          </svg>
+          <p>Это снижает нагрузку на мастера или администратора, уменьшает количество ошибок и помогает увеличить число записей.</p>
+        </div>
+
+        <div class="hero__feature">
+          <svg class="hero__feature-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2L13 8H20L14.5 12L16.5 18L10 14L3.5 18L5.5 12L0 8H7L10 2Z" fill="#6366F1"/>
+          </svg>
+          <p>Esticly делает процесс взаимодействия с клиентами более удобным, а бизнес — более организованным и предсказуемым.</p>
+        </div>
+      </div>
+
+      <div class="hero__buttons">
+        <button class="hero__btn hero__btn--primary">Скачать приложение</button>
+        <button class="hero__btn hero__btn--secondary">Попробовать бесплатно 7 дней</button>
+      </div>
+    </div>
+
+    <div class="hero__image">
+      <img src="./public/hero-section-image.png" alt="App mockup" class="hero__phones">
+    </div>
+  </div>
+
+  <!-- Bottom section -->
+  <div class="hero__bottom">
+    <div class="hero__bottom-container">
+      <p class="hero__bottom-text">Esticly делает процесс взаимодействия с клиентами более удобным, а бизнес — более организованным и предсказуемым.</p>
+      <div class="hero__apps">
+        <img src="/images/app-store.png" alt="App Store" class="hero__app-badge">
+        <img src="/images/google-play.png" alt="Google Play" class="hero__app-badge">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
