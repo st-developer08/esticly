@@ -66,3 +66,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
+import './style.css'
+
+const menuBtn = document.getElementById('menuBtn');
+const closeBtn = document.getElementById('closeBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+// Открыть меню
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+});
+
+closeBtn.addEventListener('click', () => {
+  menuBtn.classList.remove('active');
+  mobileMenu.classList.remove('active');
+});
+
+const links = document.querySelectorAll('.header__link');
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    menuBtn.classList.remove('active');
+    mobileMenu.classList.remove('active');
+  });
+});

@@ -13,34 +13,41 @@
     <!-- Header Navigation -->
 <header class="header">
   <div class="header__container">
+    <button class="header__menu-btn" id="menuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
     <div class="header__logo">
-      <img src="./public/logo.png" alt="Logo" width="120" height="120">
+      <img src="./public/logo.png" alt="Logo" width="80" height="80">
     </div>
 
-    <nav class="header__nav">
+    <nav class="header__nav" id="mobileMenu">
+      <button class="header__close-btn" id="closeBtn">
+      </button>
       <a href="#" class="header__link">Возможности</a>
       <a href="#" class="header__link">Для мастеров</a>
       <a href="#" class="header__link">Для салонов</a>
       <a href="#" class="header__link">Цены</a>
       <a href="#" class="header__link">FAQ</a>
+      <button class="header__btn header__btn--mobile">Скачать приложение</button>
     </nav>
 
     <div class="header__actions">
-  <select class="header__lang-select">
-    <option value="ru">RU</option>
-    <option value="en">EN</option>
-    <option value="ua">UA</option>
-  </select>
-  <button class="header__btn">Скачать приложение</button>
-</div>
-
-    <button class="header__menu-btn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+      <select class="header__lang-select">
+        <option value="ru">RU</option>
+        <option value="en">EN</option>
+        <option value="ua">UA</option>
+      </select>
+      <button class="header__btn header__btn--desktop">Скачать приложение</button>
+    </div>
   </div>
 </header>
+
+
+
+
 
 <!-- Hero Section -->
 <section class="hero">
