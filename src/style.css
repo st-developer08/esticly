@@ -18,6 +18,81 @@ body {
   color: #1F2937;
 }
 
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .header__container,
+  .hero__container,
+  .problems__container,
+  .features__container,
+  .hero-cta__container,
+  .footer-cta__container,
+  .footer__container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+
+  .header {
+    padding: 1rem 0;
+  }
+
+  .hero,
+  .problems,
+  .features,
+  .footer-cta,
+  .footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0;
+  }
+
+  .cta__content,
+  .download__container,
+  .footer-cta__content {
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .cta__content h2,
+  .cta__content p {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .header {
+    padding: 0.75rem 0;
+  }
+
+  .hero,
+  .problems,
+  .features,
+  .hero-cta,
+  .footer-cta,
+  .footer {
+    padding: 1.5rem 0.75rem;
+    margin: 0;
+  }
+
+  .cta__content,
+  .download__container {
+    padding: 0;
+    gap: 1rem;
+  }
+}
+
 /* Header */
 .header {
   background: white;
@@ -320,6 +395,10 @@ letter-spacing: 0%;
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+.change_to_black {
+  color: black !important;
 }
 
 .hero__btn {
@@ -1884,6 +1963,280 @@ letter-spacing: 0%;
 
 /* Download Section */
 
+/* Hero CTA Download Section */
+/* Hero CTA Download Section */
+.hero-cta-download {
+  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-attachment: fixed;
+  padding: 3rem 2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 48px;
+  margin: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 600px;
+}
+
+.hero-cta-download__container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: flex-start;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  flex: 1;
+}
+
+.hero-cta-download__image {
+  display: none;
+}
+
+.hero-cta-download__phone {
+  display: none;
+}
+
+.hero-cta-download__logo {
+  display: none;
+}
+
+.hero-cta-download__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 10;
+  position: relative;
+  grid-column: 2;
+}
+
+.hero-cta-download__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.hero-cta-download__text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.hero-cta-download__app-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hero-cta-download__app-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.hero-cta-download__app-link:hover {
+  transform: translateY(-4px);
+}
+
+.hero-cta-download__app-link img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Hero CTA Download Bottom */
+.hero-cta-download__bottom {
+  padding: 2rem 2rem;
+  position: relative;
+  z-index: 15;
+  margin-top: auto;
+}
+
+.hero-cta-download__bottom-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-radius: 24px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.hero-cta-download__bottom-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  flex: 1;
+}
+
+.hero-cta-download__apps {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.hero-cta-download__app-badge {
+  height: 50px;
+  width: auto;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .hero-cta-download {
+    margin: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 40px;
+    min-height: 500px;
+    background-position: center bottom;
+  }
+
+  .hero-cta-download__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-cta-download__content {
+    grid-column: 1;
+    z-index: 10;
+  }
+
+  .hero-cta-download__title {
+    font-size: 1.8rem;
+  }
+
+  .hero-cta-download__bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-cta-download__apps {
+    justify-content: center;
+  }
+}
+
+/* Responsive - Мобила */
+@media (max-width: 768px) {
+  .hero-cta-download {
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+    border-radius: 32px;
+    min-height: 450px;
+    background-position: center bottom;
+    background-attachment: scroll;
+  }
+
+  .hero-cta-download__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-cta-download__content {
+    grid-column: 1;
+    z-index: 10;
+  }
+
+  .hero-cta-download__title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .hero-cta-download__text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .hero-cta-download__bottom {
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+  }
+
+  .hero-cta-download__bottom-container {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .hero-cta-download__bottom-text {
+    font-size: 0.9rem;
+  }
+
+  .hero-cta-download__app-badge {
+    height: 45px;
+  }
+}
+
+/* Responsive - Маленькая мобила */
+@media (max-width: 480px) {
+  .hero-cta-download {
+    padding: 1.5rem 0.75rem;
+    margin: 1.5rem 0.75rem;
+    border-radius: 24px;
+    min-height: 400px;
+    background-position: right bottom;
+    background-size: 80%;
+  }
+
+  .hero-cta-download__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .hero-cta-download__content {
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-cta-download__title {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-cta-download__text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .hero-cta-download__bottom {
+    padding: 1rem 0.75rem;
+    margin-top: auto;
+  }
+
+  .hero-cta-download__bottom-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .hero-cta-download__bottom-text {
+    font-size: 0.8rem;
+  }
+
+  .hero-cта-download__apps {
+    gap: 0.5rem;
+  }
+
+  .hero-cta-download__app-badge {
+    height: 40px;
+  }
+}
+
+.hero-cta-download {
+  background-image: url('./public/secondphone.png'), linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+  background-size: 40% auto, cover;
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, center;
+}
+
 
 
 
@@ -1963,6 +2316,8 @@ letter-spacing: 0%;
   border-radius: 50%;
   z-index: 0;
 }
+
+
 
 .download__container {
   max-width: 1280px;
@@ -2382,7 +2737,9 @@ letter-spacing: 0%;
 
 /* CTA Text Section */
 .cta-text {
-  padding: 4rem 2rem;
+  background-color: #6C47FF0D;
+  padding: 3rem 2rem;
+  margin: 4rem 0;
 }
 
 .cta-text__container {
@@ -2391,6 +2748,29 @@ letter-spacing: 0%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-text {
+    padding: 2rem 1rem;
+    margin: 2rem 0;
+  }
+
+  .cta-text__container {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-text {
+    padding: 1.5rem 0.75rem;
+    margin: 1.5rem 0;
+  }
+
+  .cta-text__container {
+    gap: 1rem;
+  }
 }
 
 .cta-text__title {
@@ -2707,13 +3087,14 @@ letter-spacing: 0%;
 
 /* Hero CTA Section */
 /* Hero CTA Section */
+/* Hero CTA Section */
 .hero-cta {
   background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
-  padding: 3rem 2rem;
+  padding: 2rem ;
   position: relative;
   overflow: hidden;
   border-radius: 48px;
-  margin: 4rem 2rem;
+  margin: 3rem 2rem;
 }
 
 .hero-cta__container {
@@ -2744,10 +3125,17 @@ letter-spacing: 0%;
 }
 
 .hero-cta__text {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
   margin: 0;
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+leading-trim: NONE;
+line-height: 140%;
+letter-spacing: 0%;
+
 }
 
 .hero-cta__app-buttons {
@@ -2778,24 +3166,182 @@ letter-spacing: 0%;
   align-items: center;
   position: relative;
   z-index: 2;
-  height: 100%;
 }
 
-.hero-cta__phone {
+.hero-cta__image img {
   max-width: 100%;
   height: auto;
   filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.25));
   object-fit: contain;
 }
 
-.logo_btn {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  opacity: 0.3;
-  max-width: 150px;
+/* Hero CTA Bottom */
+.hero-cta__bottom {
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+}
+
+.hero-cta__bottom-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-radius: 24px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.hero-cta__bottom-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  flex: 1;
+}
+
+.hero-cta__apps {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.hero-cta__app-badge {
+  height: 50px;
+  width: auto;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1024px) {
+  .hero-cta {
+    margin: 2rem 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 40px;
+  }
+
+  .hero-cta__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .hero-cta__title {
+    font-size: 1.8rem;
+  }
+
+  .hero-cta__image {
+    justify-content: center;
+  }
+
+  .hero-cta__bottom-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-cta__apps {
+    justify-content: center;
+  }
+}
+
+/* Responsive - Мобила */
+@media (max-width: 768px) {
+  .hero-cta {
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+    border-radius: 32px;
+  }
+
+  .hero-cta__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-cta__title {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .hero-cta__text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .hero-cta__app-link img {
+    height: 45px;
+  }
+
+  .hero-cta__bottom {
+    padding: 1.5rem 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .hero-cta__bottom-container {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .hero-cta__bottom-text {
+    font-size: 0.9rem;
+  }
+
+  .hero-cta__app-badge {
+    height: 45px;
+  }
+}
+
+/* Responsive - Маленькая мобила */
+@media (max-width: 480px) {
+  .hero-cta {
+    padding: 1.5rem 0.75rem;
+    margin: 1.5rem 0.75rem;
+    border-radius: 24px;
+  }
+
+  .hero-cta__container {
+    gap: 1rem;
+  }
+
+  .hero-cta__title {
+    font-size: 1.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-cta__text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .hero-cta__app-buttons {
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+
+  .hero-cta__app-link img {
+    height: 40px;
+  }
+
+  .hero-cta__bottom {
+    padding: 1rem 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .hero-cta__bottom-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .hero-cta__bottom-text {
+    font-size: 0.8rem;
+  }
+
+  .hero-cta__apps {
+    gap: 0.5rem;
+  }
+
+  .hero-cta__app-badge {
+    height: 40px;
+  }
 }
 
 /* Responsive - Tablet */
