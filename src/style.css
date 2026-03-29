@@ -9,6 +9,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -107,7 +109,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 45px;
   padding: 0 1rem;
 }
 
@@ -118,14 +120,14 @@ body {
 }
 
 .header__logo img {
-  width: 100px;
-  height: auto;
+  width: 143px;
+  height: 56px;
   object-fit: contain;
 }
 
 .header__nav {
   display: flex;
-  gap: 2.5rem;
+  gap: 24px;
   flex: 1;
   align-items: center;
 }
@@ -146,6 +148,8 @@ body {
   align-items: center;
   gap: 1.5rem;
   flex-shrink: 0;
+
+  
 }
 
 .header__btn {
@@ -215,23 +219,10 @@ body {
   margin-bottom: 1rem;
 }
 
-.header__lang-select {
-  background: white;
-  border: none;
-  color: #6366F1;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.95rem;
-  appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236366F1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right 0.5rem center;
-  background-size: 1.2em 1.2em;
-  padding-right: 2rem;
-}
 
-/* Мобильный адаптив */
+
+
+
 @media (max-width: 768px) {
   .header__nav {
     position: fixed;
@@ -250,6 +241,11 @@ body {
     border-bottom: 1px solid #E5E7EB;
   }
 
+  .header__logo__inner{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+  }
   .header__nav.active {
     transform: translateX(0);
   }
@@ -295,9 +291,12 @@ body {
   .header__container {
     padding: 0 0.75rem;
   }
+ 
 
   .header__logo img {
-    width: 70px;
+    width:  110px !important;
+    height: 45px !important;
+    object-fit: contain;
   }
 
   .header__btn {
@@ -314,7 +313,6 @@ body {
     gap: 0.5rem;
   }
 }
-/* Hero Section */
 .hero {
   padding: 4rem 0 0 0;
   background: white;
@@ -337,26 +335,40 @@ body {
   gap: 1rem;
 }
 
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 10px 30px rgba(79, 70, 229, 0.3));
+  }
+  50% {
+    transform: translateY(-15px);
+    filter: drop-shadow(0 20px 50px rgba(79, 70, 229, 0.5));
+  }
+}
+
+.hero__image {
+  animation: floatGlow 3.5s ease-in-out infinite;
+}
+
 .hero__title {
   font-family: Inter;
-font-weight: 600;
-font-style: Semi Bold;
-font-size: 3.5rem;
-leading-trim: NONE;
-line-height: 100%;
-letter-spacing: 0%;
+  font-weight: 600;
+  font-size: 48px;
+  leading-trim: NONE;
+  letter-spacing: 0%2;
+  color: #111827;
 
 }
 
 .hero__description {
   font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 1.05rem;
-leading-trim: NONE;
-line-height: 140%;
-letter-spacing: 0%;
-
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #111827;
 }
 
 .hero__features {
@@ -378,16 +390,14 @@ letter-spacing: 0%;
 }
 
 .hero__feature p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #111827;
-
   font-family: Inter;
 font-weight: 300;
 font-style: Light;
+font-size: 16px;
 leading-trim: NONE;
 line-height: 140%;
 letter-spacing: 0%;
+color: #111827;
 
 }
 
@@ -440,33 +450,25 @@ letter-spacing: 0%;
 .hero__phones {
   max-width: 100%;
   height: auto;
-  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.15));
 }
 
-/* Hero Bottom Section */
-.hero__bottom {
-  padding: 2rem 2rem;
-  margin-top: 1rem;
-}
+
 
 .hero__bottom-container {
-  margin-bottom: 25px !important;
+  margin-bottom: 125px !important;
   max-width: 1280px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
-  
+  gap: 30px;
+  padding: 30px;
   border-radius: 24px;
-  padding: 20px;
-  padding-right: 20px;
-  gap: 20px;
   angle: 0 deg;
   opacity: 1;
   background: #ffffff; 
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-
+  color: #111827;
 
 
 }
@@ -496,10 +498,14 @@ letter-spacing: 0%;
 }
 
 .hero__bottom-text {
-  font-size: 1.1rem;
-  line-height: 1.4;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 140%;
+  letter-spacing: 0%;
   color: #111827;
-  max-width: 800px;
 }
 
 .hero__apps {
@@ -513,9 +519,7 @@ letter-spacing: 0%;
   width: auto;
 }
 
-/* Responsive Design */
 
-/* Tablet */
 @media (max-width: 1024px) {
   .header__container {
     padding: 0 1.5rem;
@@ -551,7 +555,6 @@ letter-spacing: 0%;
   }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .header__container {
     padding: 0 1rem;
@@ -607,26 +610,17 @@ letter-spacing: 0%;
   }
 
   .hero__phones {
-    max-width: 90%;
+    max-width: 100%;
     image-rendering: -webkit-optimize-contrast;
   }
 
 
 
 
-.hero__phones {
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.15));
-  image-rendering: crisp-edges;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
 
 @media (max-width: 768px) {
   .hero__phones {
-    max-width: 90%;
-    image-rendering: -webkit-optimize-contrast;
+    max-width: 100%;
   }
 }
 
@@ -657,8 +651,15 @@ letter-spacing: 0%;
   }
 
   .hero__title {
-    font-size: 1.8rem;
-    line-height: 1.3;
+    font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 30px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+color: #111827;
   }
 
   .hero__description {
@@ -697,6 +698,7 @@ letter-spacing: 0%;
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
+    
   }
 
   .hero__bottom-text {
@@ -713,7 +715,6 @@ letter-spacing: 0%;
   }
 }
 
-/* Обновить header для мобилей (@media max-width: 480px) */
 
 @media (max-width: 480px) {
   .header__logo {
@@ -835,13 +836,28 @@ letter-spacing: 0%;
   }
 
   .hero__title {
-    font-size: 1.5rem;
-    font-weight: 700;
+    color: #111827;
+    font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 30px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+
   }
 
   .hero__description {
-    font-size: 0.85rem;
-    line-height: 1.5;
+    font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #111827;
   }
 
   .hero__features {
@@ -861,7 +877,14 @@ letter-spacing: 0%;
 }
 
   .hero__feature p {
-    font-size: 0.8rem;
+    font-family: Inter;
+font-weight: 300;
+font-style: Light;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 140%;
+letter-spacing: 0%;
+color: #111827;
   }
 
   .hero__btn {
@@ -874,29 +897,69 @@ letter-spacing: 0%;
   }
 
   .hero__bottom-text {
-    font-size: 0.8rem;
+    font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: center;
+    color: rgba(17, 24, 39, 1);
   }
 
   .hero__app-badge {
-    height: 35px;
+    height: 45px;
   }
 }
 
-.header__lang-select {
-  background: white;
+.header__lang-select{
+  color: #111827 !important;
+    width: 65px !important;
+  height: 48px !important;
+  gap: 8px;
+  angle: 0 deg;
+  opacity: 1;
+  border-radius: 10px;
+  padding-top: 16px;
+  padding-right: 13px;
+  padding-bottom: 16px;
+  padding-left: 13px;
+  background-color: #4F46E51A !important;
+
   border: none;
   color: #6366F1;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.95rem;
   transition: opacity 0.3s ease;
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236366F1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.5rem center;
   background-size: 1.2em 1.2em;
   padding-right: 2rem;
+}
+
+.header__lang-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.header__lang-select {
+  appearance: none; 
+  padding-right: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__lang-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; 
+  width: 8px;
+  height: 8px;
 }
 
 .header__lang-select:hover {
@@ -915,11 +978,16 @@ letter-spacing: 0%;
   padding: 0.5rem;
 }
 
+.vector-down{
+  width: 8px;
+  height: 8px;
+}
 
-/* Problems and Solutions Section */
+
 .problems {
-  background: linear-gradient(135deg, #F0F0FF 0%, #F5F3FF 100%);
-  padding: 4rem 2rem;
+
+  background-color: rgba(108, 71, 255, 0.05);
+  padding-block: 120px;
 }
 
 .problems__container {
@@ -928,27 +996,24 @@ letter-spacing: 0%;
 }
 
 .problems__title {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
-  color: #111827;
-
-
   font-family: Inter;
 font-weight: 600;
 font-style: Semi Bold;
+font-size: 48px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
+color: rgba(17, 24, 39, 1);
+margin-bottom: 32px;
 
 }
 
 .problems__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: stretch;  /* ← ИЗМЕНИ на stretch */
+  gap: 16px;
+  align-items: stretch; 
 }
 
 .problems__card {
@@ -957,7 +1022,7 @@ text-align: center;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  height: 100%;  /* ← ДОБАВЬ эту строку */
+  height: 100%;  
 }
 
 .problems__card--white {
@@ -966,7 +1031,8 @@ text-align: center;
 }
 
 .problems__card--blue {
-  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+ background: rgba(79, 70, 229, 1);
+  border: 1px solid rgba(108, 71, 255, 0.15);
   color: white;
 }
 
@@ -981,18 +1047,22 @@ text-align: center;
 }
 
 .problems__card-title {
-  font-size: 1.3rem;
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-  font-family: Inter;
+  gap: 16px;
+font-style: Medium;
+line-height: 100%;
+color: #4F46E5;
+
+font-family: Inter;
 font-weight: 500;
 font-style: Medium;
+font-size: 20px;
 leading-trim: NONE;
 line-height: 100%;
 letter-spacing: 0%;
-color: #4F46E5;
+
 }
 
 .problems__card-title--blue {
@@ -1004,46 +1074,59 @@ color: #4F46E5;
 }
 
 .problems__card-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
-  color: #111827;
   font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-leading-trim: NONE;
-line-height: 140%;
-letter-spacing: 0%;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: rgba(17, 24, 39, 1);
 
 }
 
 .problems__card-text--blue {
-  color: rgba(255, 255, 255, 0.9);
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 140%;
+letter-spacing: 0%;
+color: rgba(255, 255, 255, 1);
 }
 
 .problems__card-text--bottom {
-  margin-top: 2rem;
-  font-style: italic;
-  color: #9CA3AF;
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 140%;
+letter-spacing: 0%;
+color: rgba(17, 24, 39, 1);
 }
 
 .problems__result {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #374151;
-  margin: 0;
-  margin-top: auto;  
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(17, 24, 39, 1);
 }
 
 .problems__highlight {
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 16px;
+  line-height: 1.4;
   color: rgba(255, 255, 255, 0.95);
   margin: 0;
-  margin-top: auto;  /* ← ДОБАВЬ эту строку */
-  background: rgba(255, 255, 255, 0.1);
+  margin-top: auto; 
   padding: 1rem;
   border-radius: 8px;
+  font-weight: 400;
 }
 
 .problems__list {
@@ -1052,35 +1135,40 @@ letter-spacing: 0%;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap:8px
 }
 
 .problems__list-item {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 1rem;
-  color: #374151;
+  gap: 18px;
+  font-size: 16px;
+  color: rgba(17, 24, 39, 1);
   line-height: 1.4;
   background-color: #F9F9FF;
-  padding: 13px;
+  padding: 16px;
   border-radius: 12px;
 }
 
 .problems__list-icon {
   min-width: 28px;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
+  width: 24px;
+  height: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
   flex-shrink: 0;
-  background: #ffffff;
 }
 .strong{
   color: #4F46E5;
+  font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+
 }
 .second_strong{
   color: #F97316;
@@ -1099,13 +1187,13 @@ letter-spacing: 0%;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 8px;
 }
 
 .problems__feature-item {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 18px;
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.95);
   background: rgba(255, 255, 255, 0.15);
@@ -1114,11 +1202,16 @@ letter-spacing: 0%;
 }
 
 .problems__feature-icon {
-  font-size: 1.2rem;
-  flex-shrink: 0;
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: white;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .problems__title {
     font-size: 2rem;
@@ -1135,8 +1228,16 @@ letter-spacing: 0%;
   }
 
   .problems__title {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+    font-family: Inter;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 30px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+margin-top: 40px;
+color: rgba(17, 24, 39, 1);
   }
 
   .problems__card {
@@ -1153,10 +1254,9 @@ letter-spacing: 0%;
 }
 
 
-/* Features Section */
 .features {
   background: white;
-  padding: 4rem 2rem;
+  padding-block: 120px;
 }
 
 .features__container {
@@ -1165,18 +1265,22 @@ letter-spacing: 0%;
 }
 
 .features__title {
-  font-size: 2.8rem;
+  font-family: Inter;
   font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 48px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
   text-align: center;
-  margin-bottom: 4rem;
-  color: #1F2937;
-  letter-spacing: -1px;
+  color: rgba(17, 24, 39, 1);
+  margin-bottom: 32px;
 }
 
 .features__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+  gap: 16px;
 }
 
 .features__card {
@@ -1227,14 +1331,22 @@ letter-spacing: 0%;
 }
 
 .features__card-title {
-  font-size: 1.25rem;
-  font-weight: 700;
   color: #4F46E5;
-  margin: 2rem 2rem 1rem 2rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  line-height: 1.4;
+  gap: 4px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  margin-right: 32px;
+
+  font-family: Inter;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: rgba(79, 70, 229, 1);
 }
 
 .features__icon {
@@ -1246,21 +1358,21 @@ letter-spacing: 0%;
 }
 
 .features__card-text {
-  font-size: 0.95rem;
-  font-weight: 400;
-  line-height: 1.7;
-  color:  #111827;
-
-  margin: 0 2rem 2rem 2rem;
-  flex-grow: 1;
-  letter-spacing: 0.3px;
-
-
+  font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 16px;
+leading-trim: NONE;
+line-height: 140%;
+letter-spacing: 0%;
+color: rgba(17, 24, 39, 1);
+padding-right: 32px;
+padding-bottom: 32px;
+padding-left: 32px;
 
 
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .features__title {
     font-size: 2.2rem;
@@ -1297,26 +1409,47 @@ letter-spacing: 0%;
   }
 
   .features__card-title {
-    font-size: 1.1rem;
-    margin: 1.5rem 1.5rem 0.75rem 1.5rem;
+    font-size: 16px !important;
+    color: rgba(79, 70, 229, 1) !important;
   }
 
   .features__card-text {
-    font-size: 0.9rem;
-    margin: 0 1.5rem 1.5rem 1.5rem;
-    line-height: 1.6;
+    font-family: Inter;
+font-weight: 400;
+font-style: Regular;
+font-size: 14px;
+leading-trim: NONE;
+line-height: 140%;
+letter-spacing: 0%;
+color: rgba(17, 24, 39, 1);
+
   }
 }
 
 @media (max-width: 480px) {
   .features__title {
-    font-size: 1.4rem;
+    font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 30px;
+  leading-trim: NONE;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(17, 24, 39, 1);
+  margin-top: 40px;
+
+  }
+  .features_icon__inner{
+    width: 20px;
+    height: 20px;
   }
 
-  .features__card-title {
-    font-size: 1rem;
-    gap: 0.5rem;
+  .features__card{
+  padding: none;
   }
+
+ 
 
   .features__icon {
     font-size: 1.5rem;
@@ -1326,7 +1459,6 @@ letter-spacing: 0%;
 
 
 
-/* CTA Section */
 .cta {
   background: white;
   padding: 4rem 2rem;
@@ -1453,7 +1585,6 @@ letter-spacing: 0%;
   display: block;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .cta__container {
     grid-template-columns: 1fr;
@@ -1565,7 +1696,6 @@ letter-spacing: 0%;
 
 
 
-/* For Whom Section */
 .for-whom {
   background: linear-gradient(135deg, #F0F0FF 0%, #F5F3FF 100%);
   padding: 4rem 2rem;
@@ -1685,7 +1815,6 @@ letter-spacing: 0%;
   color: #10B981;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .for-whom__title {
     font-size: 2rem;
@@ -1726,7 +1855,6 @@ letter-spacing: 0%;
 
 
 
-/* Pricing Section */
 .pricing {
   background: white;
   padding: 4rem 2rem;
@@ -1909,7 +2037,6 @@ letter-spacing: 0%;
   background: #FF7A2D;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .pricing__title {
     font-size: 2rem;
@@ -1961,10 +2088,6 @@ letter-spacing: 0%;
 }
 
 
-/* Download Section */
-
-/* Hero CTA Download Section */
-/* Hero CTA Download Section */
 .hero-cta-download {
   background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
   background-size: contain;
@@ -2092,7 +2215,6 @@ letter-spacing: 0%;
   width: auto;
 }
 
-/* Responsive - Tablet */
 @media (max-width: 1024px) {
   .hero-cta-download {
     margin: 2rem 1.5rem;
@@ -2126,7 +2248,6 @@ letter-spacing: 0%;
   }
 }
 
-/* Responsive - Мобила */
 @media (max-width: 768px) {
   .hero-cta-download {
     padding: 2rem 1rem;
@@ -2176,7 +2297,6 @@ letter-spacing: 0%;
   }
 }
 
-/* Responsive - Маленькая мобила */
 @media (max-width: 480px) {
   .hero-cta-download {
     padding: 1.5rem 0.75rem;
@@ -2428,7 +2548,6 @@ letter-spacing: 0%;
   opacity: 0.9;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .download__container {
     grid-template-columns: 1fr;
@@ -2511,7 +2630,6 @@ letter-spacing: 0%;
 }
 
 
-/* Reviews Section */
 .reviews {
   background: white;
   padding: 4rem 2rem;
@@ -2691,7 +2809,6 @@ letter-spacing: 0%;
   background: #4F46E5;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .reviews__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -2735,7 +2852,6 @@ letter-spacing: 0%;
 
 
 
-/* CTA Text Section */
 .cta-text {
   background-color: #6C47FF0D;
   padding: 3rem 2rem;
@@ -2750,7 +2866,6 @@ letter-spacing: 0%;
   gap: 2rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .cta-text {
     padding: 2rem 1rem;
@@ -2818,7 +2933,6 @@ letter-spacing: 0%;
   box-shadow: 0 8px 20px rgba(79, 70, 229, 0.3);
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .cta-text__title {
     font-size: 1.7rem;
@@ -2875,7 +2989,6 @@ letter-spacing: 0%;
 
 
 
-/* FAQ Section */
 .faq {
   padding: 4rem 2rem;
 }
@@ -2985,7 +3098,6 @@ letter-spacing: 0%;
   margin-top: 0;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .faq__title {
     font-size: 2rem;
@@ -3085,433 +3197,324 @@ letter-spacing: 0%;
 
 
 
-/* Hero CTA Section */
-/* Hero CTA Section */
-/* Hero CTA Section */
+
+
+
+
+/* ─────────────────────────────────────
+   СЕКЦИЯ
+───────────────────────────────────── */
 .hero-cta {
-  background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
-  padding: 2rem ;
-  position: relative;
-  overflow: hidden;
-  border-radius: 48px;
-  margin: 3rem 2rem;
+  width: 100%;
+  padding: 60px 20px;
 }
 
-.hero-cta__container {
+/* ─────────────────────────────────────
+   КАРТОЧКА
+   position: relative — для телефона
+   overflow: visible — телефон выходит
+───────────────────────────────────── */
+.hero-cta__card {
   max-width: 1280px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: center;
+  background: rgba(79, 70, 229, 1);
+  border-radius: 36px;
   position: relative;
-  z-index: 2;
+  overflow: visible;
+  padding-block: 100px;
+  padding-inline: 60px;
 }
 
-.hero-cta__content {
+/* ─────────────────────────────────────
+   ТЕЛЕФОН — только фон/декор
+   абсолютный, не влияет на поток
+   z-index: 1 — под контентом
+───────────────────────────────────── */
+.hero-cta__phone-bg {
+  position: absolute;
+  top: 110px;
+  right: 60px;
+  bottom: 0px;
+  width: 500px;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-cta__phone {
+  width: 500px;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.28));
+  display: block;
+}
+
+.hero-cta__badge {
+  position: absolute;
+  left: 80px;
+  top: 30%;
+  transform: translateY(-50%);
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  animation: floatBadge 3s ease-in-out infinite;
+}
+
+.hero-cta__badge img {
+  width: 130px !important;
+  height: 130px !important;
+  object-fit: contain;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(-50%); }
+  50%       { transform: translateY(calc(-50% - 8px)); }
+}
+
+/* ─────────────────────────────────────
+   КОНТЕНТ — заголовок + описание
+   z-index: 2 — над телефоном
+   padding-right большой — не заходим
+   под телефон визуально
+───────────────────────────────────── */
+.hero-cta__body {
+  position: relative;
+  z-index: 2;
+  padding: 48px 380px 24px 48px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  z-index: 2;
-  position: relative;
+  gap: 16px;
 }
 
 .hero-cta__title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: white;
-  line-height: 1.4;
-  margin: 0;
-}
-
-.hero-cta__text {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
   font-family: Inter;
-font-weight: 400;
-font-style: Regular;
+font-weight: 600;
+font-style: Semi Bold;
+font-size: 32px;
 leading-trim: NONE;
-line-height: 140%;
+line-height: 100%;
 letter-spacing: 0%;
-
+color: rgba(255, 255, 255, 1);
+margin-top: -60px;
 }
 
-.hero-cta__app-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1rem;
+.hero-cta__description {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  leading-trim: NONE;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 1);
 }
 
-.hero-cta__app-link {
-  display: inline-block;
-  text-decoration: none;
-  transition: transform 0.3s ease;
-}
-
-.hero-cta__app-link:hover {
-  transform: translateY(-4px);
-}
-
-.hero-cta__app-link img {
-  height: 50px;
-  width: auto;
-  object-fit: contain;
-}
-
-.hero-cta__image {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-cta__image img {
-  max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.25));
-  object-fit: contain;
-}
-
-/* Hero CTA Bottom */
+/* ─────────────────────────────────────
+   НИЖНИЙ БЛОК
+   z-index: 3 — поверх телефона (фона)
+   100% ширины карточки
+   скруглён только снизу
+───────────────────────────────────── */
 .hero-cta__bottom {
-  padding: 3rem 2rem;
-  margin-top: 2rem;
+  position: relative;
+  z-index: 3;
+  margin: 0;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 24px;
+  padding: 24px 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
 }
 
-.hero-cta__bottom-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
-  border-radius: 24px;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-}
+
 
 .hero-cta__bottom-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  flex: 1;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  leading-trim: NONE;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: rgba(255, 255, 255, 1);
 }
 
-.hero-cta__apps {
+.hero-cta__buttons {
   display: flex;
-  gap: 1rem;
+  flex-direction: row;
+  gap: 12px;
   flex-shrink: 0;
 }
 
-.hero-cta__app-badge {
-  height: 50px;
+.hero-cta__btn-img {
+  height: 46px;
   width: auto;
+  display: block;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
 }
 
-/* Responsive - Tablet */
+.hero-cta__btn-img:hover {
+  transform: translateY(-3px);
+}
+
+/* ─────────────────────────────────────
+   RESPONSIVE — 1024px
+───────────────────────────────────── */
 @media (max-width: 1024px) {
-  .hero-cta {
-    margin: 2rem 1.5rem;
-    padding: 2.5rem 1.5rem;
-    border-radius: 40px;
-  }
-
-  .hero-cta__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .hero-cta__body {
+    padding: 40px 320px 20px 40px;
   }
 
   .hero-cta__title {
-    font-size: 1.8rem;
+    font-size: 26px;
   }
 
-  .hero-cta__image {
-    justify-content: center;
+  .hero-cta__phone-bg {
+    right: 30px;
+    width: 240px;
   }
 
-  .hero-cta__bottom-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-cta__apps {
-    justify-content: center;
-  }
-}
-
-/* Responsive - Мобила */
-@media (max-width: 768px) {
-  .hero-cta {
-    padding: 2rem 1rem;
-    margin: 2rem 1rem;
-    border-radius: 32px;
-  }
-
-  .hero-cta__container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .hero-cta__title {
-    font-size: 1.5rem;
-    line-height: 1.3;
-  }
-
-  .hero-cta__text {
-    font-size: 0.9rem;
-    line-height: 1.5;
-  }
-
-  .hero-cta__app-link img {
-    height: 45px;
+  .hero-cta__phone {
+    width: 220px;
   }
 
   .hero-cta__bottom {
-    padding: 1.5rem 1rem;
-    margin-top: 1.5rem;
-  }
-
-  .hero-cta__bottom-container {
-    padding: 1.5rem;
-    gap: 1.5rem;
-  }
-
-  .hero-cta__bottom-text {
-    font-size: 0.9rem;
-  }
-
-  .hero-cta__app-badge {
-    height: 45px;
+    padding: 22px 40px;
+    border-radius: 0 0 32px 32px;
   }
 }
 
-/* Responsive - Маленькая мобила */
-@media (max-width: 480px) {
-  .hero-cta {
-    padding: 1.5rem 0.75rem;
-    margin: 1.5rem 0.75rem;
-    border-radius: 24px;
-  }
-
-  .hero-cta__container {
-    gap: 1rem;
-  }
-
-  .hero-cta__title {
-    font-size: 1.2rem;
-    line-height: 1.2;
-  }
-
-  .hero-cta__text {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-
-  .hero-cta__app-buttons {
-    gap: 0.75rem;
-    margin-top: 0.75rem;
-  }
-
-  .hero-cta__app-link img {
-    height: 40px;
-  }
-
-  .hero-cta__bottom {
-    padding: 1rem 0.75rem;
-    margin-top: 1rem;
-  }
-
-  .hero-cta__bottom-container {
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .hero-cta__bottom-text {
-    font-size: 0.8rem;
-  }
-
-  .hero-cta__apps {
-    gap: 0.5rem;
-  }
-
-  .hero-cta__app-badge {
-    height: 40px;
-  }
-}
-
-/* Responsive - Tablet */
-@media (max-width: 1024px) {
-  .hero-cta {
-    margin: 2rem 1.5rem;
-    padding: 2.5rem 1.5rem;
-  }
-
-  .hero-cta__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .hero-cta__title {
-    font-size: 1.8rem;
-  }
-
-  .hero-cta__image {
-    justify-content: center;
-  }
-}
-
-/* Responsive - Мобила */
+/* ─────────────────────────────────────
+   RESPONSIVE — 768px
+   Телефон прячем, контент на всю ширину
+───────────────────────────────────── */
 @media (max-width: 768px) {
   .hero-cta {
-    padding: 2rem 1rem;
-    margin: 2rem 1rem;
-    border-radius: 32px;
+    padding: 30px 12px;
   }
 
-  .hero-cta__container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .hero-cta__card {
+    border-radius: 28px;
+    overflow: hidden; /* скрываем телефон на мобилке */
   }
 
-  .hero-cta__title {
-    font-size: 1.5rem;
-    line-height: 1.3;
+  /* Телефон — просто фон справа, обрезанный */
+  .hero-cta__phone-bg {
+    top: 0;
+    right: -20px;
+    bottom: 0;
+    width: 180px;
+    opacity: 0.25; /* полупрозрачный как фоновый декор */
   }
 
-  .hero-cta__text {
-    font-size: 0.9rem;
-    line-height: 1.5;
+  .hero-cta__phone {
+    width: 160px;
+    object-position: center center;
   }
 
-  .hero-cta__app-link img {
-    height: 45px;
-  }
-
-  .hero-cta__image {
-    margin-top: 1rem;
-  }
-
-  .logo_btn {
-    max-width: 100px;
-  }
-}
-
-/* Responsive - Маленькая мобила */
-@media (max-width: 480px) {
-  .hero-cta {
-    padding: 1.5rem 1rem;
-    margin: 1.5rem 0.75rem;
-    border-radius: 24px;
-  }
-
-  .hero-cta__container {
-    gap: 1rem;
-  }
-
-  .hero-cta__title {
-    font-size: 1.3rem;
-    line-height: 1.2;
-  }
-
-  .hero-cta__text {
-    font-size: 0.85rem;
-    line-height: 1.4;
-  }
-
-  .hero-cta__app-buttons {
-    gap: 0.75rem;
-    margin-top: 0.75rem;
-  }
-
-  .hero-cta__app-link img {
-    height: 40px;
-  }
-
-  .hero-cta__image {
-    margin-top: 1rem;
-  }
-
-  .logo_btn {
+  .hero-cta__badge {
     display: none;
   }
-}
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .hero-cta {
-    margin: 2rem 1.5rem;
-  }
-
-  .hero-cta__container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+  .hero-cta__body {
+    padding: 32px 32px 20px 32px;
   }
 
   .hero-cta__title {
-    font-size: 1.8rem;
+    font-size: 22px;
   }
 
-  .hero-cta__image {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-cta {
-    padding: 2rem 1rem;
-    margin: 2rem 1rem;
-    border-radius: 32px;
+  .hero-cta__description {
+    font-size: 14px;
   }
 
-  .hero-cta__container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .hero-cta__bottom {
+    padding: 20px 32px;
+    border-radius: 0 0 28px 28px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
   }
 
-  .hero-cta__title {
-    font-size: 1.5rem;
+  .hero-cta__buttons {
+    width: 100%;
+    justify-content: flex-start;
   }
 
-  .hero-cta__text {
-    font-size: 0.9rem;
-  }
-
-  .hero-cta__app-link img {
-    height: 45px;
+  .hero-cta__btn-img {
+    height: 42px;
+    flex: 1;
   }
 }
 
+/* ─────────────────────────────────────
+   RESPONSIVE — 480px
+───────────────────────────────────── */
 @media (max-width: 480px) {
   .hero-cta {
-    padding: 1.5rem 0.75rem;
-    margin: 1.5rem 0.75rem;
-    border-radius: 24px;
+    padding: 20px 8px;
+  }
+
+  .hero-cta__card {
+    border-radius: 20px;
+  }
+
+  .hero-cta__phone-bg {
+    width: 140px;
+    opacity: 0.2;
+  }
+
+  .hero-cta__phone {
+    width: 120px;
+  }
+
+  .hero-cta__body {
+    padding: 24px 24px 16px 24px;
   }
 
   .hero-cta__title {
-    font-size: 1.3rem;
+    font-size: 20px;
   }
 
-  .hero-cta__text {
-    font-size: 0.85rem;
+  .hero-cta__description {
+    font-size: 13px;
+    line-height: 145%;
   }
 
-  .hero-cta__app-buttons {
-    gap: 0.5rem;
+  .hero-cta__bottom {
+    padding: 16px 24px;
+    border-radius: 0 0 20px 20px;
+    gap: 14px;
   }
 
-  .hero-cta__app-link img {
-    height: 40px;
+  .hero-cta__bottom-text {
+    font-size: 13px;
+  }
+
+  .hero-cta__btn-img {
+    height: 38px;
   }
 }
 
 
-/* Footer CTA Section */
+
+
+
+
+
+
 .footer-cta {
   background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
   padding: 3rem 2rem;
@@ -3563,7 +3566,6 @@ letter-spacing: 0%;
   object-fit: contain;
 }
 
-/* Footer */
 .footer {
   background: #F9FAFB;
   padding: 3rem 2rem;
@@ -3726,7 +3728,6 @@ letter-spacing: 0%;
   color: #4F46E5;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .footer-cta__container {
     flex-direction: column;

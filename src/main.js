@@ -73,7 +73,6 @@ const menuBtn = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
 const mobileMenu = document.getElementById('mobileMenu');
 
-// Открыть меню
 menuBtn.addEventListener('click', () => {
   menuBtn.classList.toggle('active');
   mobileMenu.classList.toggle('active');
