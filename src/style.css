@@ -3372,116 +3372,123 @@ margin-top: -60px;
 /* ─────────────────────────────────────
    RESPONSIVE — 1024px
 ───────────────────────────────────── */
+/* ── ЗАМЕНИТЬ ВСЕ hero-cta @media БЛОКИ НА ЭТО ── */
+
 @media (max-width: 1024px) {
+  .hero-cta__card {
+    padding-block: 60px;
+    padding-inline: 40px;
+  }
+
   .hero-cta__body {
-    padding: 40px 320px 20px 40px;
+    padding: 0 340px 0 0;
   }
 
   .hero-cta__title {
     font-size: 26px;
+    margin-top: 0;
   }
 
   .hero-cta__phone-bg {
     right: 30px;
-    width: 240px;
+    width: 320px;
   }
 
   .hero-cta__phone {
-    width: 220px;
-  }
-
-  .hero-cta__bottom {
-    padding: 22px 40px;
-    border-radius: 0 0 32px 32px;
+    width: 300px;
   }
 }
 
-/* ─────────────────────────────────────
-   RESPONSIVE — 768px
-   Телефон прячем, контент на всю ширину
-───────────────────────────────────── */
 @media (max-width: 768px) {
   .hero-cta {
-    padding: 30px 12px;
+    padding: 24px 12px;
   }
 
+  /* Карточка — overflow hidden чтобы телефон не торчал */
   .hero-cta__card {
-    border-radius: 28px;
-    overflow: hidden; /* скрываем телефон на мобилке */
+    padding-block: 32px;
+    padding-inline: 24px;
+    border-radius: 24px;
+    overflow: hidden;
   }
 
-  /* Телефон — просто фон справа, обрезанный */
-  .hero-cta__phone-bg {
-    top: 0;
-    right: -20px;
-    bottom: 0;
-    width: 180px;
-    opacity: 0.25; /* полупрозрачный как фоновый декор */
-  }
-
-  .hero-cta__phone {
-    width: 160px;
-    object-position: center center;
-  }
-
-  .hero-cta__badge {
-    display: none;
-  }
-
+  /* Тело — полная ширина, без отступа под телефон */
   .hero-cta__body {
-    padding: 32px 32px 20px 32px;
+    padding: 0;
+    margin-bottom: 20px;
   }
 
   .hero-cta__title {
     font-size: 22px;
+    line-height: 120%;
+    margin-top: 0;
   }
 
   .hero-cta__description {
     font-size: 14px;
   }
 
+  /* Телефон — фоновый декор, почти прозрачный */
+  .hero-cta__phone-bg {
+    top: 0;
+    right: -40px;
+    bottom: 0;
+    width: 220px;
+    opacity: 0.15;
+    z-index: 1;
+  }
+
+  .hero-cta__phone {
+    width: 200px;
+  }
+
+  .hero-cta__badge {
+    display: none;
+  }
+
+  /* Нижний блок — колонкой, текст сверху, кнопки снизу */
   .hero-cta__bottom {
-    padding: 20px 32px;
-    border-radius: 0 0 28px 28px;
+    margin-top: 0;
+    border-radius: 16px;
+    padding: 20px;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+    z-index: 4;
+    position: relative;
+  }
+
+  .hero-cta__bottom-text {
+    font-size: 13px;
+    line-height: 145%;
   }
 
   .hero-cta__buttons {
     width: 100%;
-    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
   }
 
   .hero-cta__btn-img {
-    height: 42px;
+    height: 44px;
     flex: 1;
+    width: auto;
+  }
+
+  .hero-cta__ellipse {
+    display: none;
   }
 }
 
-/* ─────────────────────────────────────
-   RESPONSIVE — 480px
-───────────────────────────────────── */
 @media (max-width: 480px) {
   .hero-cta {
-    padding: 20px 8px;
+    padding: 16px 8px;
   }
 
   .hero-cta__card {
+    padding-block: 24px;
+    padding-inline: 20px;
     border-radius: 20px;
-  }
-
-  .hero-cta__phone-bg {
-    width: 140px;
-    opacity: 0.2;
-  }
-
-  .hero-cta__phone {
-    width: 120px;
-  }
-
-  .hero-cta__body {
-    padding: 24px 24px 16px 24px;
   }
 
   .hero-cta__title {
@@ -3490,24 +3497,32 @@ margin-top: -60px;
 
   .hero-cta__description {
     font-size: 13px;
-    line-height: 145%;
+  }
+
+  .hero-cta__phone-bg {
+    width: 170px;
+    right: -30px;
+    opacity: 0.12;
+  }
+
+  .hero-cta__phone {
+    width: 155px;
   }
 
   .hero-cta__bottom {
-    padding: 16px 24px;
-    border-radius: 0 0 20px 20px;
+    padding: 16px;
+    border-radius: 14px;
     gap: 14px;
   }
 
   .hero-cta__bottom-text {
-    font-size: 13px;
+    font-size: 12px;
   }
 
   .hero-cta__btn-img {
-    height: 38px;
+    height: 40px;
   }
 }
-
 
 
 
